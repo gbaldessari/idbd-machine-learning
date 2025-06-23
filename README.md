@@ -11,17 +11,12 @@ Este proyecto implementa modelos de machine learning para predecir el abandono d
 - Java 22 (requerido para PySpark)
 - pip (gestor de paquetes de Python)
 
-## 🛠 Instalación de Dependencias
+## 🛠 Configuraciones Iniciales
 
-### 1. Configurar entorno virtual (recomendado)
+### 1. Configurar entorno
 
-```bash
-python -m venv venv
-# Linux/Mac
-source venv/bin/activate
-# Windows
-venv\Scripts\activate
-```
+Para instalar y configurar correctamente PySpark se debe seguir el siguiente tutorial:
+[How to install PySpark](https://medium.com/@marcelopedronidasilva/how-to-install-and-run-pyspark-locally-integrated-with-vscode-via-jupyter-notebook-on-windows-ff209ac8621f)
 
 ### 2. Instalar dependencias principales
 
@@ -29,16 +24,10 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Si no tienes un archivo `requirements.txt`, instala las dependencias manualmente:
+En caso de que existan problemas, instala las dependencias manualmente:
 
 ```bash
 pip install pyspark pandas numpy matplotlib seaborn scikit-learn xgboost jupyter
-```
-
-### 3. Instalar PySpark (si no se instaló con pip)
-
-```bash
-pip install pyspark
 ```
 
 ## 📂 Estructura del Proyecto
@@ -66,25 +55,8 @@ El dataset utilizado es el "Telco Customer Churn" disponible en Kaggle:
 
 [Kaggle: Telco Customer Churn](https://www.kaggle.com/blastchar/telco-customer-churn)
 
-## 📌 Notas Adicionales
-
-Para ejecutar PySpark en local, puedes necesitar configurar:
-
-```bash
-export PYSPARK_PYTHON=python3
-export PYSPARK_DRIVER_PYTHON=python3
-```
-
-La primera ejecución puede tardar mientras descarga las dependencias de Spark.
-
-Para desarrollo en Windows, asegúrate de tener Java instalado y en el PATH.
-
 ## 🤝 Autores
 
 - Giacomo Baldessari
 - Eduardo Miranda
 - David Rodríguez
-
-## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT.
